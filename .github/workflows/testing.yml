@@ -37,7 +37,8 @@ jobs:
       run: |
         go install golang.org/x/lint/golint@latest
         golint ./... | tee lint-output.txt
-        if grep -q -e "warning" -e "error" lint-output.txt; then
+        if grep -q -i -e "warning" -e "Error" lint-output.txt; then
           echo "Linting errors detected"
           exit 1
         fi
+  
