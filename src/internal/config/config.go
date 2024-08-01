@@ -14,12 +14,12 @@ var (
 )
 
 func LoadConfig() {
-	AppName = os.Getenv("APP_NAME")
-	Port = os.Getenv("PORT")
-
+	AppName = os.Getenv("APP_NAME")	
 	if AppName == "" {
 		AppName = "Go-WebDev-Learning"
 	}
+
+	Port = os.Getenv("PORT")
 	if Port == "" {
 		Port = "8080"
 	}

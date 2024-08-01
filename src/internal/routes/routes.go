@@ -9,5 +9,6 @@ import (
 func SetupRoutes() *http.ServeMux {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", handlers.HomeHandler)
+	
 	return mux
 }
