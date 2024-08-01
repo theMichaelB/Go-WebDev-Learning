@@ -17,6 +17,10 @@ func main() {
 	server := &http.Server{
 		Addr:    ":8080",
 		Handler: router,
+		ReadTimeout:    5 * time.Second,
+		WriteTimeout:   10 * time.Second,
+		IdleTimeout:    15 * time.Second,
+		ReadHeaderTimeout: 5 * time.Second
 	}
 	
 	log.Println("Server starting on port 8080...")
