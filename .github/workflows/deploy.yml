@@ -24,5 +24,7 @@ jobs:
 
     - name: Build Docker image
       run: |
+        pwd
+        ls -la
         docker build -t gcr.io/test-project-424206/go-webapp:$GITHUB_SHA .
         docker push gcr.io/test-project-424206/go-webapp:$GITHUB_SHA
