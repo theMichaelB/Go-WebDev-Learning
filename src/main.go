@@ -14,5 +14,11 @@ func main() {
 	router := routes.SetupRoutes()
 
 	log.Println("Server starting on port 8080...")
-	log.Fatal(http.ListenAndServe(":8080", router))
+	server := &http.Server{
+		Addr:    ":8080",
+		Handler: router,
+	}
+	
+	log.Println("Server starting on port 8080...")
+	log.Fatal(server.ListenAndServe())
 }
