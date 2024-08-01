@@ -1,8 +1,5 @@
 linters:
-  enable:
-    - govet
-    - golint
-    - staticcheck
+  enable-all: true
 
 issues:
   # This will make the linter fail if there are any issues
