@@ -12,7 +12,6 @@ import (
 func main() {
 	config.LoadConfig()
 
-	router := routes.SetupRoutes()
 
 	log.Println("Server starting on port 8080...")
 	server := &http.Server{
@@ -23,6 +22,8 @@ func main() {
 		IdleTimeout:    15 * time.Second,
 		ReadHeaderTimeout: 5 * time.Second,
 	}
+	
+	router := routes.SetupRoutes()
 	
 	log.Println("Server starting on port 8080...")
 	log.Fatal(server.ListenAndServe())
