@@ -12,7 +12,7 @@ var (
 	// Port holds the port the application will listen on.
 	Port    string
 )
-
+// LoadConfig loads the configuration from the environment.
 func LoadConfig() {
 	AppName = os.Getenv("APP_NAME")
 	Port = os.Getenv("PORT")
