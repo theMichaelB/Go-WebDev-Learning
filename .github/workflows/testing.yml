@@ -39,8 +39,8 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: stable
-          working-directory: src
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v6
         with:
+          working-directory: src
           version: v1.59
