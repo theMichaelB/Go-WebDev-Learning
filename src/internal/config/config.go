@@ -10,11 +10,11 @@ var (
 	// It is used for logging and display purposes.
 	AppName string
 	// Port holds the port the application will listen on.
-	Port    string
+	Port string
 )
 
 func LoadConfig() {
-	AppName = os.Getenv("APP_NAME")	
+	AppName = os.Getenv("APP_NAME")
 	if AppName == "" {
 		AppName = "Go-WebDev-Learning"
 	}
