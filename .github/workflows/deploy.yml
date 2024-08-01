@@ -29,5 +29,5 @@ jobs:
       run: |
         pwd
         ls -la
-        docker build -t gcr.io/test-project-424206/themichaelb/go-webapp:$GITHUB_SHA .
-        docker push gcr.io/test-project-424206/themichaelb/go-webapp:$GITHUB_SHA
+        docker build -t europe-west2-docker.pkg.dev/test-project-424206/themichaelb/go-webapp:$GITHUB_SHA .
+        docker push europe-west2-docker.pkg.dev/test-project-424206/themichaelb/go-webapp:$GITHUB_SHA
