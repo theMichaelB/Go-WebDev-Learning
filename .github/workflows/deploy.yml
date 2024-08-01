@@ -23,7 +23,7 @@ jobs:
 
     - name: 'Docker auth'
       run: |-
-        gcloud auth configure-docker europe-west2-docker.pkg.dev
+        gcloud auth configure-docker europe-west2-docker.pkg.dev --quiet
 
     - name: Build Docker image
       run: |
