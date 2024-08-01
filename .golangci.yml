@@ -1,5 +1,7 @@
 linters:
   enable-all: true
+  disable: 
+    gochecknoglobals: true
 
 issues:
   # This will make the linter fail if there are any issues

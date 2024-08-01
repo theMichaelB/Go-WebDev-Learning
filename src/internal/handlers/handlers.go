@@ -11,6 +11,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl, err := template.ParseFiles(tmplPath)
 	if err != nil {
 		http.Error(w, "Unable to load template", http.StatusInternalServerError)
+		
 		return
 	}
 
