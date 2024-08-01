@@ -6,12 +6,11 @@ import (
 )
 
 var (
-// AppName holds the name of the application.
-// It is used for logging and display purposes.
-var AppName string
-
-// Port is the port number on which the application listens.
-var Port string
+	// AppName holds the name of the application.
+	// It is used for logging and display purposes.
+	AppName string
+	// Port holds the port the application will listen on.
+	Port    string
 )
 
 func LoadConfig() {
