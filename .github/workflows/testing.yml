@@ -32,6 +32,7 @@ jobs:
     - name: Run static code analysis
       run: |
         cd src
+        cat main.go
         go vet ./...
   golangci:
     name: lint
