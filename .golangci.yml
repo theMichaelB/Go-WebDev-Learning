@@ -1,12 +1,28 @@
 linters:
-  enable-all: true
-  disable: 
+  disable:
+    # obnoxious
+    - cyclop
+    - dupl
+    - exhaustivestruct
+    - forcetypeassert
+    - funlen
+    - gochecknoinits
     - gochecknoglobals
+    - gocognit
+    - gocyclo
+    - godox
     - gomnd
-    - execinquery
-    - gci
-    - typecheck
+    - nlreturn
+    - paralleltest
+    - testpackage
+    - wsl
 
+    # deprecated
+    - golint
+    - interfacer
+    - maligned
+    - scopelint
+  enable-all: true
 issues:
   # This will make the linter fail if there are any issues
   max-issues-per-linter: 0
