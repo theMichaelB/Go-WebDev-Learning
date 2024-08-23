@@ -6,16 +6,19 @@ import (
 	"path/filepath"
 )
 
-func HomeHandler(w http.ResponseWriter, r *http.Request) {
+// HomeHandler is the handler for the home page.
+func HomeHandler(responseWriter http.ResponseWriter, _ *http.Request) {
 	tmplPath := filepath.Join("web", "templates", "index.html")
+
 	tmpl, err := template.ParseFiles(tmplPath)
 	if err != nil {
-		http.Error(w, "Unable to load template", http.StatusInternalServerError)
+		http.Error(responseWriter, "Unable to load template", http.StatusInternalServerError)
+
 		return
 	}
 
-	err = tmpl.Execute(w, nil)
+	err = tmpl.Execute(responseWriter, nil)
 	if err != nil {
-		http.Error(w, "Unable to render template", http.StatusInternalServerError)
+		http.Error(responseWriter, "Unable to render template", http.StatusInternalServerError)
 	}
 }

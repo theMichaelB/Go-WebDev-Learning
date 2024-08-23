@@ -6,17 +6,20 @@ import (
 )
 
 var (
+	// AppName holds the name of the application.
+	// It is used for logging and display purposes.
 	AppName string
-	Port    string
+	// Port holds the port the application will listen on.
+	Port string
 )
 
 func LoadConfig() {
 	AppName = os.Getenv("APP_NAME")
-	Port = os.Getenv("PORT")
-
 	if AppName == "" {
 		AppName = "Go-WebDev-Learning"
 	}
+
+	Port = os.Getenv("PORT")
 	if Port == "" {
 		Port = "8080"
 	}
