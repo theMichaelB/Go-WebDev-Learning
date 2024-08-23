@@ -1,0 +1,40 @@
+linters:
+  disable:
+    # obnoxious
+    - cyclop
+    - dupl
+    - exhaustivestruct
+    - forcetypeassert
+    - funlen
+    - gochecknoinits
+    - gochecknoglobals
+    - gocognit
+    - gocyclo
+    - godox
+    - gomnd
+    - nlreturn
+    - paralleltest
+    - testpackage
+    - wsl
+
+    # deprecated
+    - golint
+    - interfacer
+    - maligned
+    - scopelint
+  enable-all: true
+issues:
+  # This will make the linter fail if there are any issues
+  max-issues-per-linter: 0
+  max-issues: 0
+  max-same-issues: 0
+
+run:
+  timeout: 5m
+  include:
+    paths:
+      - src/**
+
+linters-settings:
+  golint:
+    min-confidence: 0.8
