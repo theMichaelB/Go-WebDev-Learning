@@ -13,8 +13,8 @@ jobs:
     # Checkout the repository
     - name: Checkout code
       uses: actions/checkout@v4
-        with:
-          ref: Testing
+      with:
+        ref: Testing
 
     # Set up Go environment
     - name: Set up Go
