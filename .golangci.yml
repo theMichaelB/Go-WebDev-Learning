@@ -4,8 +4,6 @@ linters:
     - gochecknoglobals
     - gomnd
     - execinquery
-    - copyloopvar
-    - intrange
     - gci
 
 issues:
