@@ -46,6 +46,8 @@ jobs:
           go-version: stable
       - name: Check branch name
         run: |
+          find .
+          pwd
           echo "Branch name is $GITHUB_REF"
           cat src/main.go
       - name: golangci-lint
