@@ -3,7 +3,6 @@ linters:
     # obnoxious
     - cyclop
     - dupl
-    - exhaustivestruct
     - forcetypeassert
     - funlen
     - gochecknoinits
@@ -16,12 +15,8 @@ linters:
     - paralleltest
     - testpackage
     - wsl
+    - depguard
 
-    # deprecated
-    - golint
-    - interfacer
-    - maligned
-    - scopelint
   enable-all: true
 issues:
   # This will make the linter fail if there are any issues

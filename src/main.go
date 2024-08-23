@@ -10,6 +10,11 @@ import (
 )
 
 func main() {
+	const ReadHeaderTimeout = 5 * time.Second
+	const ReadTimeout = 5 * time.Second
+	const WriteTimeout = 10 * time.Second
+	const IdleTimeout = 15 * time.Second
+
 	config.LoadConfig()
 
 	router := routes.SetupRoutes()
@@ -18,10 +23,10 @@ func main() {
 	server := &http.Server{
 		Addr:              ":8080",
 		Handler:           router,
-		ReadTimeout:       5 * time.Second,
-		WriteTimeout:      10 * time.Second,
-		IdleTimeout:       15 * time.Second,
-		ReadHeaderTimeout: 5 * time.Second,
+		ReadHeaderTimeout: ReadHeaderTimeout,
+		ReadTimeout:       ReadTimeout,
+		WriteTimeout:      WriteTimeout,
+		IdleTimeout:       IdleTimeout,
 	}
 
 	log.Println("Server starting on port 8080...")
