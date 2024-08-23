@@ -31,6 +31,9 @@ issues:
 
 run:
   timeout: 5m
+  include:
+    paths:
+      - src/**
 
 linters-settings:
   golint:
