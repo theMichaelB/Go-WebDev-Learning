@@ -5,6 +5,7 @@ linters:
     - gomnd
     - execinquery
     - gci
+    - typecheck
 
 issues:
   # This will make the linter fail if there are any issues
