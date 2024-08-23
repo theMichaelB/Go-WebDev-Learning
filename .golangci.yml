@@ -16,6 +16,7 @@ linters:
     - testpackage
     - wsl
     - depguard
+    - exhaustruct
 
   enable-all: true
 issues:

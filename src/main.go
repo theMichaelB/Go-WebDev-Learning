@@ -6,7 +6,6 @@ import (
 	"time"
 
 	"github.com/themichaelb/Go-WebDev-Learning/internal/config"
-	"github.com/themichaelb/Go-WebDev-Learning/internal/routes"
 )
 
 func main() {
@@ -17,12 +16,12 @@ func main() {
 
 	config.LoadConfig()
 
-	router := routes.SetupRoutes()
+	// router := routes.SetupRoutes()
 
 	log.Println("Server starting on port 8080...")
 	server := &http.Server{
-		Addr:              ":8080",
-		Handler:           router,
+		Addr: ":8080",
+		// Handler:           router,
 		ReadHeaderTimeout: ReadHeaderTimeout,
 		ReadTimeout:       ReadTimeout,
 		WriteTimeout:      WriteTimeout,
